@@ -10,3 +10,7 @@ test "Increment counter" {
   log("Assertion should fail: ${previous} === ${counter.peek()}");
   assert(previous == 1);
 } 
+
+test "Assert true" {
+  assert(true);
+} 
