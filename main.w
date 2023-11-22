@@ -12,5 +12,6 @@ test "Increment counter" {
 } 
 
 test "Assert true" {
+  log("Assertion should pass");
   assert(true);
 } 
