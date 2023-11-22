@@ -15,3 +15,8 @@ test "Assert true" {
   log("Assertion should pass");
   assert(true);
 } 
+
+test "2nd Assert true" {
+  log("2nd Assertion should pass");
+  assert(true);
+} 
