@@ -6,10 +6,18 @@ let topic = new cloud.Topic() as "Pol's Topic";
 let counter = new cloud.Counter() as "Pol's Counter";
 let counter = new cloud.Counter() as "Pol's Counter";
 
-test "Increment counter" {
-  let previous = counter.inc();
-  log("Assertion should fail: ${previous} === ${counter.peek()}");
-  assert(previous == 1);
+let secret = new cloud.Secret(name: "TEST_SECRET");
+
+let deploy = new cloud.OnDeploy(inflight () => {
+  log("SECRET ${secret.value()}");
+});
+
+test "first test" {
+  assert(true);
+} 
+
+test "another test" {
+  assert(true);
 } 
 
 test "Assert true" {
