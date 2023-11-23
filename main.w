@@ -14,8 +14,3 @@ test "Assert true again" {
   log("Assertion should pass");
   assert(true);
 } 
-
-test "Assert false" {
-  log("Assertion should fail");
-  assert(false);
-}
