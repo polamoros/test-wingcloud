@@ -20,3 +20,73 @@ test "Assert false" {
   log("Assertion should fail");
   assert(false);
 } 
+
+test "Assert false 2" {
+  log("Assertion should fail");
+  assert(false);
+} 
+
+test "Assert false 3" {
+  log("Assertion should fail");
+  assert(false);
+} 
+
+test "Assert false 4" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 5" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 6" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 7" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 8" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 9" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 10" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 11" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 12" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 13" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 14" {
+  log("Assertion should fail");
+  assert(false);
+}
+
+test "Assert false 15" {
+  log("Assertion should fail");
+  assert(false);
+}
