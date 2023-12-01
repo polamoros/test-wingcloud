@@ -19,3 +19,5 @@ test "Assert true 3" {
   log("Assertion should pass");
   assert(true);
 } 
+
+error here
