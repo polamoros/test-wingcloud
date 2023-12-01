@@ -1,15 +1,21 @@
 bring cloud;
 
-let q = new cloud.Queue();
+let bucket = new cloud.Bucket() as "Pol's Bucket";
+let queue = new cloud.Queue() as "Pol's Queue";
+let topic = new cloud.Topic() as "Pol's Topic";
+let counter = new cloud.Counter() as "Pol's Counter";
 
-test "my successfull test" {
-  log("this is a successfull test");
+test "Assert true" {
+  log("Assertion should pass");
   assert(true);
-}
+} 
 
-test "my failed test" {
-  log("this is a failure");
-  assert(false);
-}
+test "Assert true 2" {
+  log("Assertion should pass");
+  assert(true);
+} 
 
-error!!!
+test "Assert true 3" {
+  log("Assertion should pass");
+  assert(true);
+} 
