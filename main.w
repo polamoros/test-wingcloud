@@ -18,6 +18,4 @@ test "Assert true 2" {
 test "Assert true 3" {
   log("Assertion should pass");
   assert(true);
-} 
-
-Error here!!
+}
