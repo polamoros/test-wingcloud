@@ -10,7 +10,12 @@ test "Assert true" {
   assert(true);
 } 
 
-test "Assert true again" {
+test "Assert true 2" {
+  log("Assertion should pass");
+  assert(true);
+} 
+
+test "Assert true 3" {
   log("Assertion should pass");
   assert(true);
 } 
