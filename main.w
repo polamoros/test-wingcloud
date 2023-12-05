@@ -5,6 +5,7 @@ let queue = new cloud.Queue() as "Pol's Queue";
 let topic = new cloud.Topic() as "Pol's Topic";
 let counter = new cloud.Counter() as "Pol's Counter";
 let api = new cloud.Api() as "Pol's API";
+let api = new cloud.Api();
 
 api.get("/hello", inflight (request) => {
   return {
@@ -27,5 +28,3 @@ test "Assert true 3" {
   log("Assertion should pass");
   assert(true);
 }
-
-Error!!!
