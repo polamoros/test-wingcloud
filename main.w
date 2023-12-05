@@ -24,7 +24,7 @@ test "Assert true 2" {
   assert(true);
 } 
 
-test "Assert true 3" {
-  log("Assertion should pass");
-  assert(true);
+test "Assert false " {
+  log("Assertion should fail");
+  assert(false);
 }
