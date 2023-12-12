@@ -23,7 +23,11 @@ test "Assert true 2" {
   assert(true);
 } 
 
-test "Assert false " {
+test "Assert false" {
+  log("Assertion should fail");
+  assert(false);
+}
+test "Another Assert false" {
   log("Assertion should fail");
   assert(false);
 }
