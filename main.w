@@ -27,6 +27,7 @@ test "Assert false" {
   log("Assertion should fail");
   assert(false);
 }
+
 test "Another Assert false" {
   log("Assertion should fail");
   assert(false);
