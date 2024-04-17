@@ -1,20 +1,21 @@
 bring cloud;
+bring util;
+bring expect;
 
-let bucket = new cloud.Bucket() as "Pol's Bucket";
-let queue = new cloud.Queue() as "Pol's Queue";
-let topic = new cloud.Topic() as "Pol's Topic";
-let counter = new cloud.Counter() as "Pol's Counter";
-let api = new cloud.Api() as "Pol's API";
-let website = new cloud.Website(path: "") as "Pol's Website";
+let bucket = new cloud.Bucket();
+let queue = new cloud.Queue();
 
-api.get("/hello", inflight (request) => {
-  return {
-    status: 200,
-    body: "Hello World"
-  };
-});
+queue.setConsumer(inflight (message) => {
+  bucket.put("wing.txt", "Hello, {message}");
+}, timeout: 30s);
 
-test "Assert true" {
-  log("Assertion should pass");
-  assert(true);
-} 
+test "Hello, world!" {
+  queue.push("world!");
+
+  let found = util.waitUntil(() => {
+    log("Checking if wing.txt exists");
+    return bucket.exists("wing.txt");
+  });
+
+  expect.equal(bucket.get("wing.txt"), "Hello, world!");
+}
