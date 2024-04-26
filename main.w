@@ -22,7 +22,7 @@ let secret = new cloud.Secret(
 api.get("/secret", inflight (request) => {
   return {
     status: 200,
-    body: secret.value();
+    body: secret.value()
   }
 });
 
