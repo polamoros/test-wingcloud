@@ -5,6 +5,6 @@ let secret = new cloud.Secret(
 );
 
 new cloud.OnDeploy(inflight () => {
-  log("MY_SECRET: {secret.value()}");
+  log("MY_SECRET: secret.value()");
 });
 
