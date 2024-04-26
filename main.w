@@ -16,14 +16,14 @@ api.get("/hello", inflight (request) => {
 
 
 let secret = new cloud.Secret(
-  name: "MY_SECRET", // optional, defaults to a generated name
+  name: "MY_SECRET",
 );
 
 api.get("/secret", inflight (request) => {
   return {
     status: 200,
     body: secret.value()
-  }
+  };
 });
 
 test "Assert true" {
