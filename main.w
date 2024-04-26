@@ -28,7 +28,7 @@ api.get("/secret", inflight (request) => {
   } catch error {
     return {
       status: 500,
-      body: "Error getting secret"
+      body: error
     };
   }
 });
