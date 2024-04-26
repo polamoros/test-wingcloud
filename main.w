@@ -20,10 +20,17 @@ let secret = new cloud.Secret(
 );
 
 api.get("/secret", inflight (request) => {
-  return {
+  try {
+    return {
     status: 200,
     body: secret.value()
-  };
+    };
+  } catch error {
+    return {
+      status: 500,
+      body: "Error getting secret"
+    };
+  }
 });
 
 test "Assert true" {
