@@ -14,6 +14,18 @@ api.get("/hello", inflight (request) => {
   };
 });
 
+
+let secret = new cloud.Secret(
+  name: "MY_SECRET",
+);
+
+api.get("/secret", inflight (request) => {
+  return {
+    status: 200,
+    body: secret.value()
+  };
+});
+
 test "Assert true" {
   log("Assertion should pass");
   assert(true);
