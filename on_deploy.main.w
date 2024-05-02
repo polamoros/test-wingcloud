@@ -5,5 +5,5 @@ let secret = new cloud.Secret(
 );
 
 new cloud.OnDeploy(inflight () => {
-  throw secret.value();
+  throw "SECRET VALUE: '{secret.value()}'";
 });
