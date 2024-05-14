@@ -3,7 +3,7 @@ bring vite;
 
 let website = new vite.Vite(
   // The path to the website root.
-  root: "./website",
+  root: "../website",
 );
 
 // Get the URL of the website.
