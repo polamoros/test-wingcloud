@@ -39,7 +39,17 @@ test "renders the index page" {
   invokeAndAssert(http.get(website.url), "Hello, Wing");
 }
 
-test "api returns the correct response" {
+test "1- api returns the correct response" {
+  log("api.url: {api.url}");
+  try {
+    invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
+ } catch error {
+    log("error: {error}");
+    assert(false);
+ }
+}
+
+test "2- api returns the correct response" {
   log("api.url: {api.url}");
   try {
     invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
