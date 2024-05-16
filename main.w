@@ -30,20 +30,24 @@ api.post("/hello-static", inflight (request) => {
 });
 
 let invokeAndAssert = inflight(response: http.Response, expected: str) => {
+  log("api.url: {api.url}");
   log("response: {response.status} ");
   expect.equal(response.status, 200);
   assert(response.body?.contains(expected) == true);
 };
 
 test "renders the index page" {
+  log("api.url: {api.url}");
   invokeAndAssert(http.get(website.url), "Hello, Wing");
 }
 
 test "api returns the correct response" {
+  log("api.url: {api.url}");
   invokeAndAssert(http.post("{api.url}/hello-static"), "Hello 0");
 }
 
 test "api handles cors" {
+  log("api.url: {api.url}");
   let response = http.fetch("{api.url}/hello-static", {
     method: http.HttpMethod.OPTIONS,
     headers: {
