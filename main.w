@@ -16,6 +16,17 @@ let api = new cloud.Api({
 });
 website.addJson("config.json", { api: api.url });
 
+api.get("/", inflight (request) => {
+  return {
+    status: 200,
+    headers: {
+      "Content-Type" => "text/html",
+      "Access-Control-Allow-Origin" => "*",
+    },
+    body: "<div id=\"hello\" class=\"mt-4\">Hello from the API!</div>",
+  };
+});
+
 api.post("/hello-static", inflight (request) => {
   return {
     status: 200,
