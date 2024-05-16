@@ -16,7 +16,7 @@ let api = new cloud.Api({
 });
 website.addJson("config.json", { api: api.url });
 
-let counter = new cloud.Counter() as "website-counter";
+let counter = new cloud.Counter(initial: 0) as "website-counter";
 
 api.post("/hello-static", inflight (request) => {
   return {
