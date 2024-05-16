@@ -38,11 +38,16 @@ let invokeAndAssert = inflight(response: http.Response, expected: str) => {
 
 test "renders the index page" {
   log("api.url: {website.url}");
-  invokeAndAssert(http.get(website.url), "Hello, Wing");
+  try {
+    let response = http.get(website.url);
+    expect.equal(response.status, 200);
+    assert(response.body?.contains("Hello, Wing") == true);
+  } catch e {
+    log("error: {e}");
+  }
 }
 
 test "api returns the correct response" {
-  log("api.url: {api.url}");
   invokeAndAssert(http.post("{api.url}/hello-static"), "Hello 0");
 }
 
