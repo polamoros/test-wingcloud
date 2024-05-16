@@ -11,7 +11,8 @@ let api = new cloud.Api({
   cors: true,
   corsOptions: {
     allowHeaders: ["*"],
-    allowMethods: [http.HttpMethod.POST, http.HttpMethod.GET],
+    allowMethods: [http.HttpMethod.POST],
+    allowOrigin: "*"
   },
 });
 website.addJson("config.json", { api: api.url });
