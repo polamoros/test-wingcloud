@@ -41,6 +41,7 @@ test "renders the index page" {
 
 test "1- api returns the correct response" {
   log("api.url: {api.url}");
+  util.sleep(duration.fromMinutes(1));
   try {
     invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
  } catch error {
