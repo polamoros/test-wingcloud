@@ -4,7 +4,7 @@ bring http;
 bring expect;
 
 let website = new cloud.Website(
-  path: "./static",
+  path: "./website",
 );
 
 let api = new cloud.Api({
@@ -14,6 +14,7 @@ let api = new cloud.Api({
     allowMethods: [http.HttpMethod.POST],
   },
 });
+
 website.addJson("config.json", { api: api.url });
 
 
@@ -29,7 +30,7 @@ api.post("/hello-static", inflight (request) => {
 });
 
 let invokeAndAssert = inflight(response: http.Response, expected: str) => {
-  log("response: {response.status} ");
+  log("response: {Json.stringify(response)} ");
   expect.equal(response.status, 200);
   assert(response.body?.contains(expected) == true);
 };
@@ -39,18 +40,7 @@ test "renders the index page" {
   invokeAndAssert(http.get(website.url), "Hello, Wing");
 }
 
-test "1- api returns the correct response" {
-  log("api.url: {api.url}");
-  util.sleep(duration.fromSeconds(10));
-  try {
-    invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
- } catch error {
-    log("error: {error}");
-    assert(false);
- }
-}
-
-test "2- api returns the correct response" {
+test "api returns the correct response" {
   log("api.url: {api.url}");
   try {
     invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
