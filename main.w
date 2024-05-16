@@ -41,5 +41,10 @@ test "renders the index page" {
 
 test "api returns the correct response" {
   log("api.url: {api.url}");
-  invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
+  try {
+    invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
+ } catch error {
+    log("error: {error}");
+    assert(false);
+ }
 }
