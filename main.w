@@ -12,7 +12,6 @@ let api = new cloud.Api({
   corsOptions: {
     allowHeaders: ["*"],
     allowMethods: [http.HttpMethod.POST],
-    allowOrigin: "*"
   },
 });
 website.addJson("config.json", { api: api.url });
@@ -38,7 +37,7 @@ let invokeAndAssert = inflight(response: http.Response, expected: str) => {
 };
 
 test "renders the index page" {
-  log("api.url: {api.url}");
+  log("api.url: {website.url}");
   invokeAndAssert(http.get(website.url), "Hello, Wing");
 }
 
