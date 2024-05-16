@@ -41,12 +41,12 @@ test "renders the index page" {
 
 test "1- api returns the correct response" {
   log("api.url: {api.url}");
-  util.sleep(duration.fromMinutes(1));
+  util.sleep(duration.fromSeconds(10));
   try {
     invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
  } catch error {
     log("error: {error}");
-    //assert(false);
+    assert(false);
  }
 }
 
@@ -56,6 +56,6 @@ test "2- api returns the correct response" {
     invokeAndAssert(http.post("{api.url}/hello-static"), "Hello from the server");
  } catch error {
     log("error: {error}");
-    //assert(false);
+    assert(false);
  }
 }
