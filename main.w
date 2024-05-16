@@ -4,11 +4,12 @@ bring http;
 bring expect;
 
 let website = new cloud.Website(
-  path: "./websitew",
+  path: "./website",
 );
 
 test "renders the index page" {
   log("website.url: {website.url}");
+  
   let response = http.get(website.url);
   log("response: {Json.stringify(response)} ");
   
