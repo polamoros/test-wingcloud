@@ -11,6 +11,7 @@
   "dependencies": {
     "@winglibs/vite": "^0.2.0",
     "@winglibs/websockets": "^0.3.7",
-    "mime-types": "^2.1.35"
+    "mime-types": "^2.1.35",
+    "vite": "^5.2.11"
   }
 }

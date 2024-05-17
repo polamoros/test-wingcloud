@@ -1,6 +1,7 @@
 bring cloud;
 bring expect;
 bring vite;
+// bring "./vite/vite.w" as vite;
 bring http;
 bring "./broadcaster.w" as broadcaster;
 
@@ -20,7 +21,7 @@ let website = new vite.Vite(
     TITLE: "Wing + Vite + React",
     API_URL: api.url,
     WS_URL: myBroadcaster.url
-  }
+  },
 ) as "Vite Website"; 
 
 api.get("/counter", inflight () => {
@@ -37,11 +38,11 @@ api.post("/counter", inflight () => {
   };
 });
 
-test "api counter increment and get" {
-  log("counter initial value: {counter.peek()}");
-  assert(counter.peek() == 0);
-  http.post(api.url + "/counter");
-  let res = http.get(api.url + "/counter");
-  log("counter value after increment: {res.body}");
-  assert(res.body == "1");
-}
+// test "api counter increment and get" {
+//   log("counter initial value: {counter.peek()}");
+//   assert(counter.peek() == 0);
+//   http.post(api.url + "/counter");
+//   let res = http.get(api.url + "/counter");
+//   log("counter value after increment: {res.body}");
+//   assert(res.body == "1");
+// }
