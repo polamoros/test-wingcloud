@@ -308,6 +308,22 @@
           "Counter": {
             "id": "Counter",
             "path": "root/Default/Counter",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "root/Default/Counter/Resource",
+                "constructInfo": {
+                  "fqn": "@winglang/sdk.sim.Resource",
+                  "version": "0.0.0"
+                },
+                "display": {
+                  "title": "Resource",
+                  "description": "A simulated resource",
+                  "hidden": true,
+                  "color": "emerald"
+                }
+              }
+            },
             "constructInfo": {
               "fqn": "@winglang/sdk.cloud.Counter",
               "version": "0.0.0"

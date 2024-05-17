@@ -8,10 +8,6 @@
       "className": "Bucket",
       "sourcePath": "/Users/polamoros/.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/target-sim/bucket.inflight.js"
     },
-    "@winglang/sdk.cloud.Counter": {
-      "className": "Counter",
-      "sourcePath": "/Users/polamoros/.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/target-sim/counter.inflight.js"
-    },
     "@winglang/sdk.cloud.Domain": {
       "className": "Domain",
       "sourcePath": "/Users/polamoros/.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/target-sim/domain.inflight.js"
@@ -64,6 +60,10 @@
       "className": "Container",
       "sourcePath": "/Users/polamoros/.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/target-sim/container.inflight.js"
     },
+    "@winglang/sdk.sim.Resource": {
+      "className": "Resource",
+      "sourcePath": "/Users/polamoros/.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/target-sim/resource.inflight.js"
+    },
     "@winglang/sdk.ex.Table": {
       "className": "Table",
       "sourcePath": "/Users/polamoros/.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/target-sim/table.inflight.js"
@@ -82,13 +82,18 @@
     }
   },
   "resources": {
-    "root/env0/Counter": {
-      "type": "@winglang/sdk.cloud.Counter",
+    "root/env0/Counter/Resource": {
+      "type": "@winglang/sdk.sim.Resource",
       "props": {
-        "initial": 0
+        "environmentVariables": {
+          "WING_TARGET": "sim"
+        },
+        "sourceCodeFile": ".wing/resource_c811d52b.cjs",
+        "sourceCodeLanguage": "javascript"
       },
-      "path": "root/env0/Counter",
-      "addr": "c8e09cd40f3685733c4bfaa047cfad5a14591cd131"
+      "policy": [],
+      "path": "root/env0/Counter/Resource",
+      "addr": "c811d52b4378afd7a5c09fd79c89f55d0bf9685446"
     },
     "root/env0/test:api counter increment and get/Handler": {
       "type": "@winglang/sdk.cloud.Function",
@@ -98,7 +103,8 @@
         "environmentVariables": {
           "WING_TARGET": "sim",
           "WING_TOKEN_WSIM_ROOT_ENV0_API_ATTRS_URL": "${wsim#root/env0/Api#attrs.url}",
-          "COUNTER_HANDLE_591cd131": "${wsim#root/env0/Counter#attrs.handle}"
+          "COUNTER_HANDLE_f9685446": "${wsim#root/env0/Counter/Resource#attrs.handle}",
+          "RESOURCE_HANDLE_f9685446": "${wsim#root/env0/Counter/Resource#attrs.handle}"
         },
         "timeout": 60000,
         "concurrency": 100
@@ -106,13 +112,17 @@
       "policy": [
         {
           "operation": "peek",
-          "resourceHandle": "${wsim#root/env0/Counter#attrs.handle}"
+          "resourceHandle": "${wsim#root/env0/Counter/Resource#attrs.handle}"
+        },
+        {
+          "operation": "call",
+          "resourceHandle": "${wsim#root/env0/Counter/Resource#attrs.handle}"
         }
       ],
       "path": "root/env0/test:api counter increment and get/Handler",
       "addr": "c845ef9c6055aeeb310682e1815956a64bbdcda1af",
       "deps": [
-        "root/env0/Counter"
+        "root/env0/Counter/Resource"
       ]
     },
     "root/cloud.TestRunner": {
@@ -245,7 +255,8 @@
         "sourceCodeLanguage": "javascript",
         "environmentVariables": {
           "WING_TARGET": "sim",
-          "COUNTER_HANDLE_591cd131": "${wsim#root/env0/Counter#attrs.handle}"
+          "COUNTER_HANDLE_f9685446": "${wsim#root/env0/Counter/Resource#attrs.handle}",
+          "RESOURCE_HANDLE_f9685446": "${wsim#root/env0/Counter/Resource#attrs.handle}"
         },
         "timeout": 60000,
         "concurrency": 100
@@ -253,13 +264,17 @@
       "policy": [
         {
           "operation": "peek",
-          "resourceHandle": "${wsim#root/env0/Counter#attrs.handle}"
+          "resourceHandle": "${wsim#root/env0/Counter/Resource#attrs.handle}"
+        },
+        {
+          "operation": "call",
+          "resourceHandle": "${wsim#root/env0/Counter/Resource#attrs.handle}"
         }
       ],
       "path": "root/env0/Api/OnRequestHandler0",
       "addr": "c8ce9638f50f516032826c3f23b015b11795677de0",
       "deps": [
-        "root/env0/Counter"
+        "root/env0/Counter/Resource"
       ]
     },
     "root/env0/Api": {
@@ -381,7 +396,8 @@
         "sourceCodeLanguage": "javascript",
         "environmentVariables": {
           "WING_TARGET": "sim",
-          "COUNTER_HANDLE_591cd131": "${wsim#root/env0/Counter#attrs.handle}",
+          "COUNTER_HANDLE_f9685446": "${wsim#root/env0/Counter/Resource#attrs.handle}",
+          "RESOURCE_HANDLE_f9685446": "${wsim#root/env0/Counter/Resource#attrs.handle}",
           "BUCKET_HANDLE_523a1d04": "${wsim#root/env0/Broadcaster/Bucket#attrs.handle}",
           "STATE_HANDLE_b63ab41d": "${wsim#root/env0/Broadcaster/counter_updates/counter_updates/State#attrs.handle}"
         },
@@ -391,7 +407,11 @@
       "policy": [
         {
           "operation": "inc",
-          "resourceHandle": "${wsim#root/env0/Counter#attrs.handle}"
+          "resourceHandle": "${wsim#root/env0/Counter/Resource#attrs.handle}"
+        },
+        {
+          "operation": "call",
+          "resourceHandle": "${wsim#root/env0/Counter/Resource#attrs.handle}"
         },
         {
           "operation": "list",
@@ -405,7 +425,7 @@
       "path": "root/env0/Api/OnRequestHandler1",
       "addr": "c8966d94c889ae1f593a9050ec31532fbec275863e",
       "deps": [
-        "root/env0/Counter",
+        "root/env0/Counter/Resource",
         "root/env0/Broadcaster/Bucket",
         "root/env0/Broadcaster/counter_updates/counter_updates/State"
       ]
@@ -487,5 +507,5 @@
       "addr": "c882b417bfcd348b1542bde885f544bc517e171733"
     }
   },
-  "sdkVersion": "0.73.41"
+  "sdkVersion": "0.73.47"
 }

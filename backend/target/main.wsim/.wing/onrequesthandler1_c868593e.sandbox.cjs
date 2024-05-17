@@ -21,9 +21,9 @@ exports.handler = async function(event) {
             const $Closure2Client = 
           require("/Users/polamoros/Projects/WingCloud/test-wingcloud/backend/target/main.wsim/.wing/inflight.$Closure2-9.cjs")({
             $counter: (function() {
-  let handle = process.env.COUNTER_HANDLE_660dbe08;
+  let handle = process.env.COUNTER_HANDLE_7ced9640;
   if (!handle) {
-    throw new Error("Missing environment variable: COUNTER_HANDLE_660dbe08");
+    throw new Error("Missing environment variable: COUNTER_HANDLE_7ced9640");
   }
   const simulatorUrl = process.env.WING_SIMULATOR_URL;
   if (!simulatorUrl) {
@@ -33,7 +33,15 @@ exports.handler = async function(event) {
   if (!caller) {
     throw new Error("Missing environment variable: WING_SIMULATOR_CALLER");
   }
-  return require("@winglang/sdk/lib/simulator/client").makeSimulatorClient(simulatorUrl, handle, caller);
+  const backend = require("@winglang/sdk/lib/simulator/client").makeSimulatorClient(simulatorUrl, handle, caller);
+  const client = new Proxy(backend, {
+    get: function(target, prop, receiver) {
+      return async function(...args) {
+        return backend.call(prop, args);
+      };
+    },
+  });
+  return client;
 })(),
             $myBroadcaster: 
       (await (async () => {
@@ -123,11 +131,11 @@ exports.handler = async function(event) {
   return await $handler.handle(event);
 };
 process.on("uncaughtException", (reason) => {
-  process.send({ type: "reject", reason });
+  process.send({ type: "error", reason });
 });
 
 process.on("message", async (message) => {
   const { fn, args } = message;
   const value = await exports[fn](...args);
-  process.send({ type: "resolve", value });
+  process.send({ type: "ok", value });
 });

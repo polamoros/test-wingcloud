@@ -96,6 +96,34 @@
       "name": "delete"
     },
     {
+      "source": "root/env0/Counter",
+      "sourceOp": "inc",
+      "target": "root/env0/Counter/Resource",
+      "targetOp": "call",
+      "name": "call"
+    },
+    {
+      "source": "root/env0/Counter",
+      "sourceOp": "dec",
+      "target": "root/env0/Counter/Resource",
+      "targetOp": "call",
+      "name": "call"
+    },
+    {
+      "source": "root/env0/Counter",
+      "sourceOp": "peek",
+      "target": "root/env0/Counter/Resource",
+      "targetOp": "call",
+      "name": "call"
+    },
+    {
+      "source": "root/env0/Counter",
+      "sourceOp": "set",
+      "target": "root/env0/Counter/Resource",
+      "targetOp": "call",
+      "name": "call"
+    },
+    {
       "source": "root/env0/Vite Website/Vite_sim/$Closure1_0",
       "sourceOp": "handle",
       "target": "root/env0/Vite Website/Vite_sim/State",

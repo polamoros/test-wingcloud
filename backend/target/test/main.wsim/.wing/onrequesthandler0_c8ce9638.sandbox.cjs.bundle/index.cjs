@@ -6,9 +6,9 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js
 var require_helpers = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js"(exports, module) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js"(exports, module) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -194,9 +194,9 @@ var require_helpers = __commonJS({
   }
 });
 
-// backend/target/test/main.wsim/.wing/inflight.$Closure1-9.cjs
+// target/test/main.wsim/.wing/inflight.$Closure1-9.cjs
 var require_inflight_Closure1_9 = __commonJS({
-  "backend/target/test/main.wsim/.wing/inflight.$Closure1-9.cjs"(exports2, module2) {
+  "target/test/main.wsim/.wing/inflight.$Closure1-9.cjs"(exports2, module2) {
     "use strict";
     var $helpers = require_helpers();
     module2.exports = function({ $counter }) {
@@ -218,9 +218,9 @@ var require_inflight_Closure1_9 = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/dependency.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/dependency.js
 var require_dependency = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/dependency.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/dependency.js"(exports2) {
     "use strict";
     var _a;
     var _b;
@@ -290,9 +290,9 @@ var require_dependency = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/stack-trace.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/stack-trace.js
 var require_stack_trace = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/stack-trace.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/stack-trace.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.captureStackTrace = void 0;
@@ -316,9 +316,9 @@ var require_stack_trace = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/uniqueid.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/uniqueid.js
 var require_uniqueid = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/uniqueid.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/private/uniqueid.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.addressOf = void 0;
@@ -340,9 +340,9 @@ var require_uniqueid = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/construct.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/construct.js
 var require_construct = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/construct.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/construct.js"(exports2) {
     "use strict";
     var _a;
     var _b;
@@ -795,17 +795,17 @@ var require_construct = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/metadata.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/metadata.js
 var require_metadata = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/metadata.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/metadata.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/index.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/index.js
 var require_lib = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/index.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/constructs/lib/index.js"(exports2) {
     "use strict";
     var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -834,9 +834,9 @@ var require_lib = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/errors.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/errors.js
 var require_errors = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/errors.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/errors.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.AbstractMemberError = exports2.NotImplementedError = void 0;
@@ -866,9 +866,9 @@ Contributions welcome \u2764\uFE0F` : ""}`);
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/tokens.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/tokens.js
 var require_tokens = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/tokens.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/tokens.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.getTokenResolver = exports2.registerTokenResolver = exports2.tokenEnvName = void 0;
@@ -891,9 +891,9 @@ var require_tokens = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/lifting.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/lifting.js
 var require_lifting = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/lifting.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/lifting.js"(exports2) {
     "use strict";
     var _a;
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -1118,9 +1118,9 @@ It might not be implemented yet.`, { resource: obj.constructor.name, operation: 
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/types.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/types.js
 var require_types = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/types.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/types.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.SECRET_SYMBOL = exports2.INFLIGHT_SYMBOL = exports2.Construct = void 0;
@@ -1133,9 +1133,9 @@ var require_types = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/shared/misc.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/shared/misc.js
 var require_misc = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/shared/misc.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/shared/misc.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.isPath = exports2.shell = exports2.runCommand = exports2.normalPath = exports2.readJsonSync = void 0;
@@ -1179,9 +1179,9 @@ var require_misc = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/inflight.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/inflight.js
 var require_inflight = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/inflight.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/core/inflight.js"(exports2) {
     "use strict";
     var _a;
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -1342,9 +1342,9 @@ var require_inflight = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/std/datetime.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/std/datetime.js
 var require_datetime = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/std/datetime.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/std/datetime.js"(exports2) {
     "use strict";
     var _a;
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -1528,9 +1528,9 @@ var require_datetime = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/serialization.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/serialization.js
 var require_serialization = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/serialization.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/serialization.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.deserialize = exports2.serialize = void 0;
@@ -1580,9 +1580,9 @@ var require_serialization = __commonJS({
   }
 });
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/client.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/client.js
 var require_client = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/client.js"(exports2) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/simulator/client.js"(exports2) {
     "use strict";
     var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -1663,7 +1663,7 @@ var require_client = __commonJS({
           });
           let parsed = (0, serialization_1.deserialize)(resp);
           if (parsed.error) {
-            if (method === "then" && parsed.error?.message?.startsWith("Method then not found on resource")) {
+            if (method === "then" && parsed.error?.message?.startsWith('Method "then" not found on resource')) {
               hasThenMethod = false;
               return args[0](proxy);
             }
@@ -1687,7 +1687,7 @@ ${err.stack}`;
   }
 });
 
-// backend/target/test/main.wsim/.wing/onrequesthandler0_c8ce9638.sandbox.cjs
+// target/test/main.wsim/.wing/onrequesthandler0_c8ce9638.sandbox.cjs
 var $handler = void 0;
 exports.handler = async function(event) {
   $handler = $handler ?? await (async () => {
@@ -1707,9 +1707,9 @@ exports.handler = async function(event) {
       handler: await (async () => {
         const $Closure1Client = require_inflight_Closure1_9()({
           $counter: function() {
-            let handle = process.env.COUNTER_HANDLE_591cd131;
+            let handle = process.env.COUNTER_HANDLE_f9685446;
             if (!handle) {
-              throw new Error("Missing environment variable: COUNTER_HANDLE_591cd131");
+              throw new Error("Missing environment variable: COUNTER_HANDLE_f9685446");
             }
             const simulatorUrl = process.env.WING_SIMULATOR_URL;
             if (!simulatorUrl) {
@@ -1719,7 +1719,15 @@ exports.handler = async function(event) {
             if (!caller) {
               throw new Error("Missing environment variable: WING_SIMULATOR_CALLER");
             }
-            return require_client().makeSimulatorClient(simulatorUrl, handle, caller);
+            const backend = require_client().makeSimulatorClient(simulatorUrl, handle, caller);
+            const client2 = new Proxy(backend, {
+              get: function(target, prop, receiver) {
+                return async function(...args) {
+                  return backend.call(prop, args);
+                };
+              }
+            });
+            return client2;
           }()
         });
         const client = new $Closure1Client({});
@@ -1738,11 +1746,11 @@ exports.handler = async function(event) {
   return await $handler.handle(event);
 };
 process.on("uncaughtException", (reason) => {
-  process.send({ type: "reject", reason });
+  process.send({ type: "error", reason });
 });
 process.on("message", async (message) => {
   const { fn, args } = message;
   const value = await exports[fn](...args);
-  process.send({ type: "resolve", value });
+  process.send({ type: "ok", value });
 });
 //# sourceMappingURL=index.cjs.map

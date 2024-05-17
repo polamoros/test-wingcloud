@@ -6,9 +6,9 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// ../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js
+// ../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js
 var require_helpers = __commonJS({
-  "../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js"(exports, module) {
+  "../../../../.nvm/versions/node/v20.11.1/lib/node_modules/winglang/node_modules/@winglang/sdk/lib/helpers.js"(exports, module) {
     "use strict";
     var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
       if (k2 === void 0)
@@ -194,9 +194,9 @@ var require_helpers = __commonJS({
   }
 });
 
-// backend/target/main.wsim/.wing/inflight.$Closure1-3.cjs
+// target/main.wsim/.wing/inflight.$Closure1-3.cjs
 var require_inflight_Closure1_3 = __commonJS({
-  "backend/target/main.wsim/.wing/inflight.$Closure1-3.cjs"(exports2, module2) {
+  "target/main.wsim/.wing/inflight.$Closure1-3.cjs"(exports2, module2) {
     "use strict";
     var $helpers = require_helpers();
     module2.exports = function({ $__parent_this_1_url }) {
@@ -218,7 +218,7 @@ var require_inflight_Closure1_3 = __commonJS({
   }
 });
 
-// backend/target/main.wsim/.wing/handler_c80e7182.sandbox.cjs
+// target/main.wsim/.wing/handler_c80e7182.sandbox.cjs
 var $handler = void 0;
 exports.handler = async function(event) {
   $handler = $handler ?? await (async () => {
@@ -234,11 +234,11 @@ exports.handler = async function(event) {
   return await $handler.handle(event);
 };
 process.on("uncaughtException", (reason) => {
-  process.send({ type: "reject", reason });
+  process.send({ type: "error", reason });
 });
 process.on("message", async (message) => {
   const { fn, args } = message;
   const value = await exports[fn](...args);
-  process.send({ type: "resolve", value });
+  process.send({ type: "ok", value });
 });
 //# sourceMappingURL=index.cjs.map
